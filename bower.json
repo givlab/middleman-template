@@ -1,0 +1,10 @@
+{
+  "name": "givlab-website",
+  "private": "true",
+  "dependencies": {
+    "jquery": "latest",
+    "modernizr": "< 3",
+    "respond": "latest",
+    "normalize-css": "latest"
+  }
+}

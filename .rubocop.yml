@@ -1,0 +1,59 @@
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.3
+
+Rails:
+  Enabled: true
+  Exclude:
+    - 'vendor/**/*'
+    - 'build/**/*'
+
+Style/Encoding:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Style/Documentation:
+  Enabled: false
+
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+Style/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines
+
+
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%':  []
+    '%i': []
+    '%q': ()
+    '%Q': ()
+    '%r': '{}'
+    '%s': []
+    '%w': []
+    '%W': []
+    '%x': ()
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+Style/GuardClause:
+  MinBodyLength: 1
+
+Metrics/LineLength:
+  Max: 120

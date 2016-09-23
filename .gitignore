@@ -1,0 +1,8 @@
+/.bundle
+/build
+/.sass-cache
+/.cache
+.DS_Store
+/vendor/bower
+
+.byebug_history
