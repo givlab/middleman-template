@@ -29,3 +29,7 @@ configure :build do
   activate :asset_hash
   activate :gzip
 end
+
+data.team.members.each do |slug, member|
+  proxy "/team/#{slug}/index.html", "/team/member-template.html", locals: member, ignore: true
+end
