@@ -1,11 +1,5 @@
-activate :livereload
-
 activate :automatic_image_sizes
-
 activate :directory_indexes
-
-activate :autoprefixer
-
 activate :sprockets
 sprockets.append_path(File.join(root, "vendor/bower"))
 
@@ -22,7 +16,13 @@ set :slim, pretty: true
 require "sass"
 ::Sass::Script::Number.precision = [10, ::Sass::Script::Number.precision].max
 
+configure :development do
+  # activate :autoprefixer
+  activate :livereload, apply_js_live: false
+end
+
 configure :build do
+  activate :autoprefixer
   activate :minify_css
   activate :minify_javascript
   activate :imageoptim
