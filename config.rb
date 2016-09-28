@@ -1,7 +1,9 @@
+bower_path = File.join(root, "vendor/bower")
+
 activate :automatic_image_sizes
 activate :directory_indexes
 activate :sprockets
-sprockets.append_path(File.join(root, "vendor/bower"))
+sprockets.append_path(bower_path)
 
 set :relative_links, true
 set :css_dir, "assets/stylesheets"
@@ -15,6 +17,7 @@ set :slim, pretty: true
 
 require "sass"
 ::Sass::Script::Number.precision = [10, ::Sass::Script::Number.precision].max
+::Sass.load_paths << bower_path unless ::Sass.load_paths.include?(bower_path)
 
 configure :development do
   # activate :autoprefixer
